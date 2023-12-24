@@ -16,3 +16,19 @@ function darkModeON(){
 function LoadMoreToggle(){
     LoadMoreBackground.classList.toggle("loadMoreToggle");
 };
+
+
+function toggleChildTabs(event) {
+    event.classList.toggle('active');
+  }
+
+  function toggleTabs(event) {
+    const clickedElement = event.currentTarget;
+    clickedElement.parentElement.classList.toggle('active');
+
+    // Ngăn chặn sự kiện click từ propagation lên đến menu
+    event.stopPropagation();
+
+    childMenu.classList.toggle('active');
+  }
+  

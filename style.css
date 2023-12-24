@@ -716,7 +716,7 @@ img.coverImage {
 
 h1 {
     text-align: center;
-    background-color: #1876f2aa;
+    background-color: #1876f2;
     color: #fff;
     padding: 25px 0;
     margin: 0;
@@ -780,28 +780,58 @@ button:hover {
     background-color: rgb(255, 196, 0);
 }
 
-/* menu example */
+a {
+    text-decoration: none;
+}
 
-.vertical-menu {
-    width: 1500x; /* Set a width if you like */
-  }
-  
-  .vertical-menu a {
-    background-color: #eee; /* Grey background color */
-    color: black; /* Black text color */
-    display: block; /* Make the links appear below each other */
-    padding: 25px; /* Add some padding */
-    text-decoration: none; /* Remove underline from links */
-    font-size: 25px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .vertical-menu a:hover {
-    background-color: #ccc; /* Dark grey background on mouse-over */
-  }
-  
-  .vertical-menu a.active {
-    background-color: #1876f2; /* Add a green color to the "active/current" link */
-    color: white;
-  }
+/* menu */
+
+.menu-container {
+    display: table;
+    padding-left: 225px;
+    padding-right: 225px;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+.child-menu {
+    display: none;
+    border-style: groove;
+    width: 1070px;
+}
+
+.child-menu :hover {
+    background-color: #afcef8;
+}
+
+.child-menu p {
+    font-size: 24px;
+    color: #1876f2;
+}
+
+.tab {
+    display: none;
+    font-size: 18px;
+    border-style: groove;
+    border-width: 0.5px;
+    padding-left: 25px;
+}
+
+.tab a {
+    text-decoration: none;
+}
+
+.tab :hover {
+    background-color: white;
+}
+
+.menu.active .child-menu {
+    display: block;
+}
+
+.child-menu.active .tab {
+    display: block;
+}
+
